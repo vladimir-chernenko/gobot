@@ -20,7 +20,8 @@ func handlePhoneNumber(b *tb.Bot, user *userInfo)  {
     if match {
       user.Phone = m.Text
       log.Println("Sender:", m.Sender, "Phone:" , user.Phone)
-      b.Send(m.Sender, "Ok, now I need the name of crypto currency")
+      b.Send(m.Sender, "Ok, now I need the name of crypto currency. Send me number")
+			b.Send(m.Sender, "1 Bitcoin\n2 Ethereum\n3 Litecoin\n4 Bitcoin Cash")
       handleCurrency(b, user)
     } else {
       b.Send(m.Sender, "Number is not valid. Try again.")

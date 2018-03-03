@@ -1,4 +1,4 @@
-package sms
+package main
 
 import (
   "github.com/levigross/grequests"

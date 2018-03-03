@@ -4,7 +4,6 @@ import (
   "github.com/levigross/grequests"
   "os"
   "log"
-  "fmt"
 )
 
 func SendSMS(phone string, message string) {
@@ -12,9 +11,9 @@ func SendSMS(phone string, message string) {
 
   DEBUG := os.Getenv("GOBOT_DEBUG") == "1"
 
-  fmt.Printf("DEBUG is %t \n", DEBUG)
+  log.Println("DEBUG is %t \n", DEBUG)
 
-  fmt.Printf("Send SMS to '%s' with text '%s' \n", phone, message)
+  log.Println("Send SMS to '%s' with text '%s' \n", phone, message)
 
   if DEBUG {
     url = "https://httpbin.org/post"

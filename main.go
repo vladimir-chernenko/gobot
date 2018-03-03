@@ -1,23 +1,8 @@
 package main
 
-import (
-	"flag"
-	"fmt"
-)
+import "github.com/vladimir-chernenko/gobot/sms"
+
 
 func main() {
-
-	versionFlag := flag.Bool("version", false, "Version")
-	flag.Parse()
-
-	if *versionFlag {
-		fmt.Println("Git Commit:", GitCommit)
-		fmt.Println("Version:", Version)
-		if VersionPrerelease != "" {
-			fmt.Println("Version PreRelease:", VersionPrerelease)
-		}
-		return
-	}
-
-	fmt.Println("Hello.")
+	sms.SendSMS("+420725543082", "ty pidor")
 }
